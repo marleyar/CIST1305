@@ -1,0 +1,13 @@
+#Conversion
+ktm = 0.6214
+
+#Main Function
+def main():
+    km = float(input('Enter the distance in kilometers: '))
+    print(float(input(km * ktm)))
+    
+
+
+
+#Calling both functions
+main()
