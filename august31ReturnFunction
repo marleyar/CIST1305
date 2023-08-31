@@ -1,0 +1,18 @@
+#Main Function
+def main ():
+    num1 = input('Enter a number, please: ')
+    return(num1)
+
+
+
+
+def changeValue ():
+    num1 = main()
+    num2 = input('Enter another number, please: ')
+    print(num1 + num2)
+
+
+
+
+#Calling both functions
+changeValue ()
