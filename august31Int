@@ -1,0 +1,10 @@
+#Defining an integer to use in an equation
+def timesTen ():
+    x = int(input('Input a number'))
+    print(x * 10)
+
+
+
+
+
+timesTen ()
