@@ -1,0 +1,71 @@
+def main():
+   def declareVariables(endProgram, endOrder, totalBurger, totalFry, totalSoda, total, tax, subtotal, option, burgerCount, fryCount, sodaCount):
+
+   #loop to run program again
+        while endProgram == (str("no")):
+            resetVariables(totalBurger, totalFry, totalSoda, total, tax, subtotal)
+
+     #loop to take in order
+        while endOrder == (str("no")):
+            print("Enter 1 for Yum Yum Burger")
+            print("Enter 2 for Grease Yum Fries")
+            print("Enter 3 for Soda Yum")
+            option = input('Enter a number, please: ')
+        if option == 1:
+            getBurger(totalBurger, burgerCount)
+        else:
+            if option == 2:
+                getFry(totalFry, fryCount)
+            else:
+                if option == 3:
+                    getSoda(totalSoda, sodaCount)
+                else:
+                    print("Do you want to end your order? (yes/no):")
+
+	
+        calcTotal(totalBurger, totalFry, totalSoda, total, subtotal, tax)
+        printReceipt(total)
+
+def resetVariables (totalBurger, totalFry, totalSoda, total, tax, subtotal):
+#reseting variables
+   totalBurger = 0
+   totalFry = 0
+   totalSoda = 0
+   total = 0
+   tax = 0
+   subtotal = 0
+   
+#getting burgers
+def getBurger(totalBurger, burgerCount): 
+    burgerCount = (int(input("Enter the number of burgers you want")))
+    totalBurger = totalBurger + burgerCount * .99
+
+#getting fries
+def getFry(totalFry, fryCount):
+    fryCount = (int(input("Enter the number of fries you want")))
+    totalFry = totalFry + fryCount * .79
+
+#getting soda
+def getSoda(totalSoda, sodaCount):
+    sodaCount = (int(input("Enter the number of sodas you want")))
+    totalSoda = totalSoda + sodaCount * 1.09
+
+#calculating toal
+def calcTotal(totalBurger, totalFry, totalSoda, total, subtotal, tax):
+    subtotal = totalBurger + totalFry + totalSoda
+    tax = subtotal * .06
+    total = subtotal + tax
+
+#printing receipt
+def printReceipt(total):
+    print("Your total is $", total)
+
+
+
+main()
+#resetVariables() # i am getting the type error of requiring 6 positional arguments
+#getBurger()
+#getFry()
+#getSoda()
+#calcTotal()
+#printReceipt()
