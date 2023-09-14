@@ -1,0 +1,9 @@
+#WIP
+def main ():
+    endProgram = 'no'
+    while endProgram == "no":
+        getBottles (totalBottles)
+
+
+#calls main
+(main)
