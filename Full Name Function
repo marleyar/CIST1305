@@ -16,3 +16,5 @@ def fullName ():
 
 #Calling function to print full name
 fullName ()
+
+#Note to self: While this code works, it fails Big 0 notation. It would be faster and simpler to have ONE function as opposed to two.
