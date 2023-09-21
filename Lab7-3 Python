@@ -1,0 +1,42 @@
+# Lab 7-3 The Dice Game
+# add libraries needed
+import random
+
+# the main function
+def main():
+    print()
+
+    # initialize variables
+    endProgram = "no"
+    playerOne = "NO NAME"
+    playerTwo = "NO NAME"
+
+    # call to inputNames
+    
+
+    # while loop to run program again
+    while endProgram == 'no':
+
+        # populate variables
+        
+
+        # call to rollDice
+
+
+        # call to displayInfo
+
+
+        endProgram = input('Do you want to end program? (yes/no): ')
+
+
+#this function gets the players names
+
+
+#this function will get the random values
+
+
+#this function displays the winner
+
+
+# calls main
+main()
