@@ -1,0 +1,25 @@
+#constant percentage
+mark_up = 2.5
+
+#starting over
+def repeat ():
+    another = 'y'
+
+    while another == 'y' or 'Y':
+        show_retail()
+
+        another = input('Do you have another item? Enter y for yes.')
+
+#takes wholesale price to calculate retail price
+def show_retail ():
+    wholesale = (float(input('Enter your items wholesale cost: $')))
+
+    while wholesale <= 0:
+        print('No way! The cost cant be that.')
+        wholesale = (float(input('Enter your items wholesale cost: $')))
+        
+#printing retail price
+    retail = wholesale * mark_up
+    print('The retail price is:$', retail,'.')
+    
+repeat()
