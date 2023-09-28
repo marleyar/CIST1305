@@ -1,0 +1,36 @@
+def main():
+    print(getAllowed() * getUsed())
+
+# finished and tested
+def getAllowed():
+    minutesAllowed = int(input("Please enter minutes allowed: "))
+    while minutesAllowed < 200 or minutesAllowed > 800:
+        print('Please enter minutes between 200 and 800.')
+        minutesAllowed = int(input("Please enter minutes allowed: "))
+    return(minutesAllowed)
+
+#finished and tested
+def getUsed():
+    minutesUsed = int(input("Please enter minutes used: "))
+    while minutesUsed < 0:
+        print('Please enter minutes of at least 0.')
+        minutesUsed = int(input("Please enter minutes used: "))
+    return(minutesUsed)
+
+#finished but not yet tested, need to test by itself
+def calcTotal(minutesAllowed, minutesUsed):
+    extra = 0
+    if minutesUsed <= minutesAllowed:
+        totalDue = 74.99
+        minutesOver = 0
+        print('You were not over your minutes for the month.')
+    else:
+        minutesOver = minutesUsed - minutesAllowed
+        extra = minutesOver * .20
+        totalDue = 74.99 + extra
+        print('You were over your minutes by', minutesOver)
+    return(totalDue, minutesOver)
+
+#printData module still needed; view pseudocode in email
+
+main()
