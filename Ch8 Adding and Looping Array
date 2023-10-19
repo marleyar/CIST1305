@@ -1,0 +1,15 @@
+
+#arrays and all that
+total = 0
+count = 0
+sales = []
+while count < 6:
+    newSale = (float(input('Enter your sales: ')))
+    sales.append(newSale)
+    print(sales)
+    count += 1
+    
+for i in sales:
+    total = total + i
+
+print(total)
