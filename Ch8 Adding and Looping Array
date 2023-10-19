@@ -1,5 +1,4 @@
-
-#arrays and all that
+#arrays
 total = 0
 count = 0
 sales = []
