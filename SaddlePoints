@@ -1,0 +1,23 @@
+# Making the 2D array using NumPy
+import numpy as np
+import random
+
+table = np.random.randint(0, 100, size=(7, 7))
+print(table)
+
+# Finding saddle points 
+for item_row in table:
+    column_number = 0
+    min_item = np.amin(item_row)
+    for i in range(len(item_row)):
+        # comparing the minimum number to the row
+        if min_item == item_row[i]:
+            row_number = i
+            #transposing table to make new row with column numbers
+            reverse_table = table.transpose()
+            max_item = np.amax(reverse_table[row_number])
+            if max_item == min_item:
+                print("The saddle points are:",min_item,'.')
+            if max_item != min_item:
+                print('There are no saddle points.')
+            
