@@ -1,0 +1,51 @@
+# Uses menu template from the CIST Template repository.
+# Display the menu
+def main():
+    print('--Main Menu--')
+    print('1. Convert inches to centimeters.')
+    print('2. Convert feet to meters.')
+    print('3. Convert miles to kilometers')
+    print('4. End Program')
+    print()
+
+# Getting user selection
+    menu_selection = int(input('Enter your selection: '))
+
+# Validating selection
+    while menu_selection < 1 or menu_selection > 4:
+        print('That is an invalid selection.')
+        menu_selection = int(input('Enter your selection: '))
+
+#Performing selected operation
+    if menu_selection == 1:
+        in_to_cm()
+    
+    elif menu_selection == 2:
+        ft_to_m()
+    
+    elif menu_selection == 3:
+        mi_to_km()
+
+    elif menu_selection == 4:
+        print('Understood. Goodbye!')
+
+
+
+# Conversion modules based on menu options
+def in_to_cm():
+    inches = (float(input('Enter your amount in inches: ')))
+    centimeters = inches * 2.54
+    print('All done! \n Your amount in centimeters is', centimeters,'.')
+
+def ft_to_m():
+    feet = (float(input('Enter your amount for conversion: ')))
+    meters = feet * 0.3048
+    print('Finished! \n Your amount in meters is', meters,'.')
+
+def mi_to_km():
+    miles = (float(input('Enter your amount for conversion: ')))
+    kilometers = miles * 1.609
+    print('Conversion complete! Your amount in kilometers is', kilometers,'.')
+
+
+main()
