@@ -17,17 +17,15 @@ def main():
         menu_selection = int(input('Enter your selection: '))
 
 #Performing selected operation
-    if menu_selection == 1:
-        in_to_cm()
-    
-    elif menu_selection == 2:
-        ft_to_m()
-    
-    elif menu_selection == 3:
-        mi_to_km()
-
-    elif menu_selection == 4:
-        print('Understood. Goodbye!')
+    match menu_selection:
+        case 1:
+            in_to_cm()
+        case 2:
+            ft_to_m()
+        case 3:
+            mi_to_km()
+        case 4:
+            print('Thank you for using.')
 
 
 
