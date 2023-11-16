@@ -1,3 +1,6 @@
+# Next steps: The program should be able to get, edit, and print the posts. There is currently no edit function available. 
+# Allow user to print the post, allowing the user to select the number of the post via index.
+
 # The array to hold all posts of the user.
 all_posts = []
 
