@@ -1,5 +1,8 @@
+# The array to hold all posts of the user.
 all_posts = []
 
+# Showing the menu and taking input for the next step. 
+# Then, it will call each module accordingly.
 def menu():
     repeat = True
     while repeat == True:
@@ -10,27 +13,38 @@ def menu():
 
         choice = input("Your selection: ")
 
+        # Going to the module that adds a post
         if choice =="1":
             get_post()
+
+        # Going to the module to view all posts
         elif choice == "2":
             show_posts()
+
+        # Exiting the program; Might be changed later.
         elif choice == "3":
             print("Exiting.")
+
+        # Input validation to ensure the option is in the menu.
         else:
             print("That is an invalid selection.")
 
+# Allowing a new post to be written and adding it to the global array.
 def get_post():
-    # all_posts = []
     post = str(input('Write your post below: \n'))
     all_posts.append(post)
     new_post = (input('Would you like to write another post? For yes, press 1: '))
+
+    # Allowing user to add as many posts as they like in one sitting.
+    # May switch up to the menu section if need be.
     while new_post == '1':
         post = str(input('Write your post below: \n'))
         all_posts.append(post)
         new_post = (input('Would you like to write another post? For yes, press 1. If not, press 2: '))
 
+# Showing all posts stored thus far.
 def show_posts():
     print('Your Posts:\n', all_posts)
 
-
+# Calling the menu/main
 menu()
