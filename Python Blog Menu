@@ -1,22 +1,26 @@
+all_posts = []
+
 def menu():
-    print("--Python Blog--")
-    print("1. Add a post")
-    print("2. View posts")
-    print("3. Exit")
+    repeat = True
+    while repeat == True:
+        print("--Python Blog--")
+        print("1. Add a post")
+        print("2. View posts")
+        print("3. Exit")
 
-    choice = input("Your selection: ")
+        choice = input("Your selection: ")
 
-    if choice =="1":
-        get_post()
-    elif choice == "2":
-        print('Viewing posts.')
-    elif choice == "3":
-        print("Exiting.")
-    else:
-        print("That is an invalid selection.")
+        if choice =="1":
+            get_post()
+        elif choice == "2":
+            show_posts()
+        elif choice == "3":
+            print("Exiting.")
+        else:
+            print("That is an invalid selection.")
 
 def get_post():
-    all_posts = []
+    # all_posts = []
     post = str(input('Write your post below: \n'))
     all_posts.append(post)
     new_post = (input('Would you like to write another post? For yes, press 1: '))
@@ -24,6 +28,9 @@ def get_post():
         post = str(input('Write your post below: \n'))
         all_posts.append(post)
         new_post = (input('Would you like to write another post? For yes, press 1. If not, press 2: '))
+
+def show_posts():
+    print('Your Posts:\n', all_posts)
 
 
 menu()
